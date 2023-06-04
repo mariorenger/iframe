@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: auth
+  cloud:
+    config:
+      enabled: false
+
+eureka:
+  instance:
+    prefer-ip-address: true
+    leaseRenewalIntervalInSeconds: 10
+    metadata-map:
+      instanceId: ${spring.application.name}:${spring.application.instance_id:${server.port}:${random.value}}
+    appname: auth
+  client:
+    serviceUrl:
+      defaultZone: http://registry:8761/eureka

@@ -1,0 +1,42 @@
+version: "3.7"
+
+x-common: &common
+  restart: always
+  logging:
+    options:
+      max-size: "10m"
+      max-file: "10"
+  networks:
+    - dsp
+
+services:
+  example:
+    <<: *common
+    image: dsp/example
+    container_name: example
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - SERVICE_NAME=example
+        - PORT=8080
+
+  db:
+    <<: *common
+    image: mysql
+    container_name: db
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: testdb
+      MYSQL_ROOT_PASSWORD: mysql12345
+      MYSQL_USER: nguyennamhan
+      MYSQL_PASSWORD: mysql12345
+    ports:
+      - "9906:3306"
+    volumes:
+      - ./db/db.sql:/docker-entrypoint-initdb.d/dump.sql
+
+networks:
+  dsp:
+    name: dsp_network
+    driver: bridge

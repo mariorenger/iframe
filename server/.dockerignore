@@ -1,0 +1,9 @@
+logs
+*.sh
+.idea
+.ci
+.git
+*.md
+Dockerfile
+**/*.iml
+.logs
