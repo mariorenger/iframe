@@ -8,6 +8,7 @@ Database example project in `db/db.sql`
 
 ## Requirements
 Java: 11
+
 Maven: 3.8 
 
 ## Build code Spring Boot by Maven
@@ -26,5 +27,6 @@ mvn spring-boot:run
 docker-compose up --build -d
 ```
 
-## Check result: <host>:8080/ex1/tutorials?user=user1&key=<*****>
+## Check result
+<host>:8080/ex1/tutorials?user=user1&key=<*****>
 
