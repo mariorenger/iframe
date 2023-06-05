@@ -17,5 +17,6 @@ docker-compose up --build -d
 ```
 ## Result 
 Run service example after run gateway and registry. Port gateway use in 8050.
-Check <host>:8050/ex1/tutorials?user=user1&key=<*****>
+
+Check result: <host>:8050/ex1/tutorials?user=user1&key=<*****>
 
