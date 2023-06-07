@@ -1,7 +1,11 @@
-# The end result is that the website may be safely embedded into an IFrame as a security demonstration for an unsafe website.
+## The end result is that the website may be safely embedded into an IFrame as a security demonstration for an unsafe website.
 
-## demo-iframe folder is the original website that lacks authentication and authorization.
+<ul>
 
-## server is the directory of gateway api and service discovery to secure demo-iframe.
+  <li>demo-iframe folder is the original website that lacks authentication and authorization.
 
-# The README.md file of each service contains comprehensive installation information.
+  <li>server is the directory of gateway api and service discovery to secure demo-iframe.
+
+</ul>
+
+## The README.md file of each service contains comprehensive installation information.
