@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0" />
-  <title>BezKoder - Spring Boot Thymeleaf example</title>
+  <title>An example web to become a iframe</title>
 
   <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" />
   <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}" />
@@ -29,25 +29,6 @@
       </button>
     </div>
 
-    <div class="my-3" th:if="${tutorials != null}">
-      <form th:action="@{/tutorials}">
-        <div class="row d-flex">
-          <div class="col-md-6 mt-2">
-            <div class="search">
-              <i class="fa fa-search"></i>
-              <input type="hidden" name="user" th:value="${user != null? user.getUsername() : null}" />
-              <input id="keyword" type="search" name="keyword" th:value="${keyword}" required class="form-control"
-                placeholder="Enter keyword">
-              <button type="submit" class="btn btn-secondary">Search</button>
-            </div>
-          </div>
-          <div class="col-md-6 mt-2">
-            <button id="btnClear" class="btn btn-info">Clear</button>
-          </div>
-        </div>
-      </form>
-    </div>
-
     <div th:if="${tutorials != null && tutorials.size() > 0}">
       <table class="table table-hover table-responsive-xl">
         <thead class="thead-light">
@@ -56,8 +37,6 @@
             <th scope="col">Title</th>
             <th scope="col">Description</th>
             <th scope="col">Level</th>
-            <th scope="col">Published</th>
-            <th scope="col">Actions</th>
           </tr>
         </thead>
         <tbody>

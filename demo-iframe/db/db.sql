@@ -41,7 +41,7 @@ CREATE TABLE `tutorials` (
 
 LOCK TABLES `tutorials` WRITE;
 /*!40000 ALTER TABLE `tutorials` DISABLE KEYS */;
-INSERT INTO `tutorials` VALUES (1,'hello',1,1,'chamchamcham',1),(2,'hasdfasdfas',1,1,'nhin le',2),(3,'xin chao user2',1,1,'no no ',2);
+INSERT INTO `tutorials` VALUES (1,'Computer Networking',1,1,'All about computer network',1),(2,'Sofware Archtecture',1,1,'All about Sofware architecture',1),(3,'Sofware Archtecture',1,1,'All about Sofware architecture',2),(4,'BE',1,1,'Back End',2),(5,'FE',1,1,'Front End',2),(6,'Sercurity',1,1,'All about sercurity',1);
 /*!40000 ALTER TABLE `tutorials` ENABLE KEYS */;
 UNLOCK TABLES;
 
